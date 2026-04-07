@@ -1,4 +1,4 @@
-<?php require_once "backend/conexao.php"; ?>
+<?php require_once "backend/Conexao.php"; ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -19,7 +19,7 @@
       <p>Por favor, insira suas credenciais para entrar.</p>
     </div>
 
-    <form action="backend/login.php" method="POST">
+    <form action="backend/Login.php" method="POST">
       <div class="form-group">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" placeholder="seu@email.com" required>

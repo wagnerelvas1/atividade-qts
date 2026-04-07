@@ -1,4 +1,4 @@
-<?php require_once "backend/conexao.php"; ?>
+<?php require_once "backend/Conexao.php"; ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -19,7 +19,7 @@
       <p>Preencha os dados abaixo para se cadastrar.</p>
     </div>
 
-    <form action="backend/cadastrar.php" method="POST">
+    <form action="backend/CadastrarUsuario.php" method="POST">
       <div class="form-group">
         <label for="nome">Nome Completo</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>

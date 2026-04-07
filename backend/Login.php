@@ -1,6 +1,6 @@
 <?php
 
-require_once "conexao.php";
+require_once "Conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
@@ -15,14 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ]);
 
   $usuario = $stmt->fetch();
-  print_r($usuario['email']);
-  die();
 
   if ($usuario && $usuario['email'] === $email) {
     session_start();
     $_SESSION["usuario"] = $usuario;
-    header("Location: ../dashboard.php");
+    header("Location: ../estoque.php");
+    exit;
   }
 
   header("Location: ../index.php");
+  exit;
 }
