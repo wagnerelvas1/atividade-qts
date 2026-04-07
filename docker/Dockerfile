@@ -48,11 +48,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN a2enmod rewrite
 
 # Copiar arquivo de configuração customizado
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+# COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 
 # Configurar o diretório público como DocumentRoot
-ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+# ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+# RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
 # Expor a porta padrão do Apache
 EXPOSE 80
