@@ -9,8 +9,8 @@ $sql = "
     p.cod, 
     p.nome, 
     p.preco,
-    SUM(e.qtd) as qtd_estoque,
-    SUM(e.qtd * p.preco) as valor_total
+    COALESCE(SUM(e.qtd), 0) as qtd_estoque,
+    COALESCE(SUM(e.qtd * p.preco), 0) as valor_total
   FROM produtos p
   LEFT JOIN entradas e ON p.id = e.fk_produto
   GROUP BY p.id
@@ -19,4 +19,3 @@ $sql = "
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $produtos = $stmt->fetchAll();
-

@@ -5,11 +5,11 @@
     <form class="product-form" action="backend/CadastrarProduto.php" method="POST">
       <div class="form-group">
         <label for="codigo">Código</label>
-        <input type="text" maxlength="4" id="codigo" name="codigo" placeholder="Ex: 0004">
+        <input type="text" maxlength="4" id="codigo" name="codigo" placeholder="Ex: 0004" required>
       </div>
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Nome do produto">
+        <input type="text" id="nome" name="nome" placeholder="Nome do produto" required>
       </div>
       <div class="form-group">
         <label for="categoria">Categoria</label>

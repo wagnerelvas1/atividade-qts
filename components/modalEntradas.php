@@ -14,11 +14,11 @@
       </div>
       <div class="form-group">
         <label for="quantidade">Quantidade</label>
-        <input type="number" id="quantidade" name="quantidade" placeholder="Max: 9999">
+        <input type="number" id="quantidade" name="quantidade" placeholder="Max: 9999" required>
       </div>
       <div class="form-group">
         <label for="data">Data</label>
-        <input type="date" id="data" name="data" placeholder="Data">
+        <input type="date" id="data" name="data" placeholder="Data" required>
       </div>
       <button type="submit" class="btn-submit">Salvar</button>
     </form>

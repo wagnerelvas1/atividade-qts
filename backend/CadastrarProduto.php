@@ -12,6 +12,7 @@ if (strlen($cod) != 4) {
     $cod = "0" . $cod;
   }
 }
+$cod = strtoupper($cod);
 
 $sql = "INSERT INTO produtos (cod, nome, fk_categoria, preco) VALUES (:codigo, :nome, :categoria, :preco)";
 
