@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="navbar-wrapper">
     <div class="navbar-brand">
-      <strong>Qualidade e Teste de Software</strong>
+      <strong>EstoqueLab</strong>
     </div>
     <ul class="navbar-nav">
       <li><a href="estoque.php" class="nav-link <?= $page == 'estoque' ? 'active' : '' ?>">Estoque</a></li>
