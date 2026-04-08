@@ -5,7 +5,7 @@
     <form class="product-form" action="backend/CadastrarCategoria.php" method="POST">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required placeholder="Ex: Eletrônicos">
+        <input type="text" id="nome" name="nome" placeholder="Ex: Eletrônicos">
       </div>
       <button type="submit" class="btn-submit">Salvar</button>
     </form>
