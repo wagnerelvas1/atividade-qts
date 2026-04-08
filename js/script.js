@@ -21,6 +21,11 @@ function setupPasswordToggle(toggleBtnId, inputId) {
   });
 }
 
+function toggleUserDropdown(event) {
+  event.preventDefault();
+  document.getElementById("userDropdown").classList.toggle("show");
+}
+
 function openModal(id) {
   document.getElementById(id).style.display = "flex";
 }
@@ -35,4 +40,16 @@ window.addEventListener("DOMContentLoaded", function () {
       event.target.style.display = "none";
     }
   };
+});
+
+window.addEventListener("click", function (event) {
+  if (!event.target.closest(".navbar-user")) {
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
 });

@@ -18,3 +18,8 @@ $sql = "
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $produtos = $stmt->fetchAll();
+
+session_start();
+$usuario = $_SESSION['usuario']['nome'];
+$usuario = explode(" ", $usuario);
+$usuario = $usuario[0];
