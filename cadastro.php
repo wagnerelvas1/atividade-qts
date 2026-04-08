@@ -22,18 +22,18 @@
     <form action="backend/CadastrarUsuario.php" method="POST">
       <div class="form-group">
         <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
       </div>
 
       <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        <input type="text" id="email" name="email" placeholder="seu@email.com">
       </div>
 
       <div class="form-group">
         <label for="password">Senha</label>
         <div class="password-wrapper">
-          <input type="password" id="password" name="password" placeholder="••••••••" required>
+          <input type="password" id="password" name="password" placeholder="••••••••">
           <button type="button" id="togglePassword" class="toggle-password" aria-label="Mostrar senha">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -46,7 +46,7 @@
       <div class="form-group">
         <label for="confirm_password">Confirmar Senha</label>
         <div class="password-wrapper">
-          <input type="password" id="confirm_password" name="confirm_password" placeholder="••••••••" required>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="••••••••">
           <button type="button" id="toggleConfirmPassword" class="toggle-password" aria-label="Mostrar senha">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
