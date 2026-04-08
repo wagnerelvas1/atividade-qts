@@ -14,18 +14,7 @@ Este repositório contém a entrega de um sistema de controle de estoque simples
 - **Frontend:** HTML5, CSS3 (Modern UI / Dark Mode), Vanilla JavaScript
 - **Banco de Dados:** MySQL / MariaDB
 
----
 
-## 💣 Checklist de Vulnerabilidades e Erros 
-
-Esta seção é dedicada ao catálogo final e mapeamento de todas as anomalias, bugs e vulnerabilidades de segurança exploradas no trabalho avaliativo.
-
-- [ ] ⚠️ *O Erro 1 aparecerá aqui...*
-- [ ] ⚠️ *O Erro 2 aparecerá aqui...*
-- [ ] ⚠️ *O Erro 3 aparecerá aqui...*
-- [ ] ⚠️ *O Erro 4 aparecerá aqui...*
-
----
 
 ## 🚀 Como Executar o Projeto
 
