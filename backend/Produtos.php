@@ -1,6 +1,7 @@
 <?php
 
 require_once "Conexao.php";
+require_once "GetUsername.php";
 
 $sql = "SELECT id, nome FROM categorias ORDER BY nome";
 $stmt = $conn->prepare($sql);

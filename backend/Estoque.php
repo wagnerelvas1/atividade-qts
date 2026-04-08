@@ -1,6 +1,7 @@
 <?php
 
 require_once "Conexao.php";
+require_once "GetUsername.php";
 
 $sql = "
   SELECT 
@@ -19,7 +20,3 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 $produtos = $stmt->fetchAll();
 
-session_start();
-$usuario = $_SESSION['usuario']['nome'];
-$usuario = explode(" ", $usuario);
-$usuario = $usuario[0];
