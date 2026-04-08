@@ -1,43 +1,50 @@
-# 🐛 Projeto de Estoque Vulnerável - Qualidade e Teste de Software 🚨
+# 🐛 Trabalho Prático - Qualidade e Teste de Software 🚨
 
-Bem-vindo ao repositório do projeto da disciplina de **Qualidade e Teste de Software**! 
+**Análise de Qualidade e Segurança de Software**
 
-Este é um sistema de controle de estoque simples (com `Categorias`, `Produtos` e `Entradas`), mas com um **propósito especial**: ele foi construído para dar errado! 💥
+Este projeto foi desenvolvido como trabalho acadêmico (Atividade Avaliativa) para a disciplina de **Qualidade e Teste de Software** do curso de **Análise e Desenvolvimento de Sistemas (5º período - ADS)**, sob orientação da professora **Caroline Carvalho Nogueira**.
 
-O código contém diversas vulnerabilidades de segurança intencionais, falhas de lógica de negócio e ausência de validações (tanto no front-end quanto com o banco de dados). O objetivo primário deste repositório é servir como um "parque de diversões" para estudantes praticarem **Testes de Software e Segurança (QA / Pentest)**, localizando e catalogando pontos onde a aplicação simplesmente colapsa.
+Este repositório contém a entrega de um sistema de controle de estoque simples (com `Categorias`, `Produtos` e `Entradas`) concebido propositalmente com brechas! 💥 O objetivo do trabalho é testar, identificar e documentar problemas de segurança, furos na lógica de negócios e falta de validações (tanto no front-end quanto no banco de dados).
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Backend:** PHP (Com falhas de validação de rotas e segurança na sessão)
+- **Backend:** PHP 
 - **Frontend:** HTML5, CSS3 (Modern UI / Dark Mode), Vanilla JavaScript
-- **Banco de Dados:** Relacional (MySQL / MariaDB)
+- **Banco de Dados:** MySQL / MariaDB
 
 ---
 
 ## 💣 Checklist de Vulnerabilidades e Erros 
 
-Esta seção é dedicada ao registro de todas as anomalias, falhas de lógica (bugs) e vulnerabilidades de segurança contidas no projeto. 
+Esta seção é dedicada ao catálogo final e mapeamento de todas as anomalias, bugs e vulnerabilidades de segurança exploradas no trabalho avaliativo.
 
-*(Preencher gradativamente com as falhas encontradas durante os testes!)*
-
-- [ ] ⚠️ *Insira o Erro 1 aqui...*
-- [ ] ⚠️ *Insira o Erro 2 aqui...*
-- [ ] ⚠️ *Insira o Erro 3 aqui...*
-- [ ] ⚠️ *Insira o Erro 4 aqui...*
-- [ ] ⚠️ *Insira a falha de lógica de negócio aqui...*
-- [ ] ⚠️ *Insira o problema da falta de `required` nos formulários aqui...*
-- [ ] ⚠️ *Insira o erro gerado na sessão de usuário destravada aqui...*
+- [ ] ⚠️ *O Erro 1 aparecerá aqui...*
+- [ ] ⚠️ *O Erro 2 aparecerá aqui...*
+- [ ] ⚠️ *O Erro 3 aparecerá aqui...*
+- [ ] ⚠️ *O Erro 4 aparecerá aqui...*
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🚀 Como Executar o Projeto
 
-1. Suba um servidor web (XAMPP, WAMP, ou container Docker) com suporte a **PHP** e **MySQL**.
-2. Restaure o dump do seu banco de dados no MySQL.
-3. Importe o conteúdo do repositório para a pasta pública (ex: `htdocs` ou `www`).
-4. Configure as credenciais no arquivo `backend/Conexao.php` ou nas variáveis adequadas.
-5. Acesse a aplicação e comece a testar / quebrar o sistema! 🔨
+O projeto não requer frameworks pesados e pode ser facilmente executado utilizando qualquer ambiente que possua servidor web com **PHP e Apache** (como XAMPP, Laragon, WAMP ou Docker).
 
-> **Aviso Importante:** 🛑 **NÃO** hospede este projeto em qualquer ambiente de produção online ou servidor aberto ao público! Ele é repleto de brechas exclusivas para aprendizado puramente acadêmico.
+Siga os passos abaixo:
+
+### Passo 1: Preparando o Banco de Dados 🗄️
+Localize na raiz do projeto a pasta `setup/`. Dentro dela, execute as instruções do arquivo `banco.sql` no seu servidor MySQL ou MariaDB para construir as tabelas e a estrutura exigida pela aplicação.
+
+### Passo 2: Configurando o Servidor Web 🌐
+- Você pode rodar de forma nativa movendo os arquivos do repósitorio para a pasta pública do seu servidor (normalmente `htdocs` no **XAMPP** ou `www` no **Laragon**).
+- **Alternativa Docker (Recomendado):** Na pasta `setup/`, disponibilizamos um `Dockerfile` e as instruções para que o projeto rode facilmente isolado numa máquina conteinerizada!
+
+### Passo 3: Configuração das Credenciais (Importante) 🔑
+Na raiz do código existe um arquivo de modelo de ambiente chamado: 
+`vars.example.php`.
+
+Duplique (ou renomeie) este arquivo para **`vars.php`**. 
+Abra o novo `vars.php` gerado e preencha com as suas próprias credenciais locais (Nome do banco, usuário, e-mail de root e etc) para que a aplicação consiga se comunicar com o banco de dados que você importou na etapa um.
+
+Feito isso, abra `http://localhost/` (ou a porta customizada que configurou) em seu navegador para explorar e descobrir todos os problemas escondidos! 🔨
