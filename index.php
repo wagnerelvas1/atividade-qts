@@ -47,6 +47,11 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setupPasswordToggle("togglePassword", "password");
+    });
+  </script>
 </body>
 
 </html>
